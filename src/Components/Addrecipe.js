@@ -1,4 +1,5 @@
 import React, { useState } from 'react'
+import Header from './Header'
 
 const Addrecipe = () => {
     var[recipetitle,setrecipetitle]=useState("")
@@ -11,6 +12,7 @@ const Addrecipe = () => {
     }
   return (
     <div>
+        <Header/>
 
 <div className="container">
     <div className="row">
