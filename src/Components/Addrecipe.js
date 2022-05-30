@@ -1,3 +1,4 @@
+import axios from 'axios'
 import React, { useState } from 'react'
 import Header from './Header'
 
@@ -9,6 +10,16 @@ const Addrecipe = () => {
     const subdata=()=>{
         const data={"recipetitle":recipetitle,"category":category,"description":description,"preparedby":preparedby}
         console.log(data)
+        axios.post("http://localhost:4500/api/recipeapp",data).then((response)=>{
+            if(response.data.status=="success")
+            {
+                alert("successfully inserted")
+            }
+            else
+            {
+                alert("failed")
+            }
+        })
     }
   return (
     <div>
